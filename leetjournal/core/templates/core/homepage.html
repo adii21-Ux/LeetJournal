@@ -1,0 +1,57 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "css/core/homepage.css" %}">
+{% endblock css %}
+
+{% block content %}
+
+<div class="problem-container">
+    <div class="heading">
+        <h1>Save Problem</h1>
+    </div>
+    <form action="" method="post" class="solution-form">
+        <div class="problem-name">
+            <input type="text" placeholder="Name of Problem" id="problem-name">
+        </div>
+        <div class="difficulty">
+            <label for="difficulty-button">Difficulty</label>
+            <button class="easy difficulty-button">Easy</button>
+            <button class="medium difficulty-button">Medium</button>
+            <button class="hard difficulty-button">Hard</button>
+        </div>
+        <br />
+        <div class="approach">
+            <label for="explanation" id="explanation-label">Explain Approach</label>
+            <textarea name="explanation" id="explanation" cols="30" rows="10"></textarea>
+        </div>
+        <div class="code-container">
+            <div class="language">
+                <select name="lang" id="">
+                    <option value="cpp">C++</option>
+                    <option value="java">Java</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+            <div class="code-window">
+                <textarea name="code-sample" id="code" cols="30" rows="10" wrap="off" autocapitalize="off"
+                    autocomplete="off">
+
+                </textarea>
+            </div>
+        </div>
+        <div class="submit-btn">
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static "editor/ckeditor.js" %}"></script>
+<script>
+    CKEDITOR.replace("explanation");
+</script>
+{% endblock scripts %}
