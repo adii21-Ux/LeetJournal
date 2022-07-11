@@ -15,34 +15,36 @@
         <div class="problem-name">
             <input type="text" placeholder="Name of Problem" id="problem-name">
         </div>
-        <div class="difficulty">
-            <label for="difficulty-button">Difficulty</label>
-            <button class="easy difficulty-button">Easy</button>
-            <button class="medium difficulty-button">Medium</button>
-            <button class="hard difficulty-button">Hard</button>
+        <div class="difficulty-sec">
+            <select name="difficulty" class="difficulty dropdown">
+                <option value="none" selected disabled hidden class="dropdown-opt">Select Difficulty</option>
+                <option value="easy" id="easy" class="dropdown-opt">Easy</option>
+                <option value="medium" id="medium" class="dropdown-opt">Medium</option>
+                <option value="hard" id="hard" class="dropdown-opt">Hard</option>
+            </select>
         </div>
         <br />
         <div class="approach">
-            <label for="explanation" id="explanation-label">Explain Approach</label>
+            <label for="explanation" id="explanation-label">Approach</label>
             <textarea name="explanation" id="explanation" cols="30" rows="10"></textarea>
         </div>
         <div class="code-container">
-            <div class="language">
-                <select name="lang" id="">
-                    <option value="cpp">C++</option>
+            <div class="language-sec">
+                <select name="lang" class="language dropdown">
+                    <option value="none" selected disabled hidden class="dropdown-opt">Select Language</option>
+                    <option value="c_cpp">C++</option>
                     <option value="java">Java</option>
                     <option value="python">Python</option>
                 </select>
             </div>
             <div class="code-window">
-                <textarea name="code-sample" id="code" cols="30" rows="10" wrap="off" autocapitalize="off"
-                    autocomplete="off">
+                <div id="code">
 
-                </textarea>
+                </div>
             </div>
         </div>
-        <div class="submit-btn">
-            <button type="submit">Save</button>
+        <div class="submit-btn-sec">
+            <button type="submit" class="submit-btn">Save</button>
         </div>
     </form>
 </div>
@@ -50,7 +52,9 @@
 {% endblock content %}
 
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ace.js" integrity="sha512-FKkEO4RZEQjFmU1hoUYdx6HJLdpHpNzgWspgnQCxx7OOkDVz4kiGJxR97yWc5bzjwcCpJC/CRCiQzuoGYAChhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{% static "editor/ckeditor.js" %}"></script>
+<script src="{% static 'js/editor.js' %}"></script>
 <script>
     CKEDITOR.replace("explanation");
 </script>

@@ -8,17 +8,15 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <div class="navelems">
-                <a href="/" target="_blank" rel="noopener noreferrer">Your Submissions</a>
-            </div>
             <div class="logo">
                 <h1 id="logo">
-                    LJ
+                    <span>Leet</span>Journal
                 </h1>
             </div>
-            <div class="profile">
-                <p>Your Profile</p>
-                <img src="#" alt="">
+            <div class="profile-sec">
+                <div class="submissions">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Your Submissions</a>
+                </div>
             </div>
         </div>
     </div>
@@ -26,6 +24,12 @@
     {% block content %}
 
     {% endblock content %}
+
+    <div class="footer">
+        <p>2022 All Rights Reserved</p>
+    </div>
 </body>
+<script src="{% static 'js/base.js' %}"></script>
 {% block scripts %}{% endblock scripts %}
+
 </html>

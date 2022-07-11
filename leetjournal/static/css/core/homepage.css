@@ -42,36 +42,50 @@
     border-color: #b3b3b3;
 }
 
-.difficulty {
+.difficulty-sec {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     grid-column: 1 /2;
-    margin-bottom: 30px;
+    margin: 30px 0px 40px 0px;
 }
 
-.difficulty-button {
-    margin: 20px 10px;
-    padding: 7px 10px;
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid rgb(209, 209, 209);
+.dropdown {
+    padding: 10px;
+    border: 1px solid white;
     border-radius: 7px;
-    cursor: pointer;
-    transition: all 0.5 ease-in;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: white;
+    outline: none;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    transition: all .5s ease;
 }
 
-.easy {
-    color: black;
-    background-color: rgb(0 175 155);
+.dropdown:hover {
+    box-shadow: 0 0 4px rgb(204, 204, 204);
 }
 
-.medium {
-    color: black;
-    background-color: rgb(255, 184, 0);
+.dropdown:active {
+    background-color: #f8f8f8;
+    border: none;
+    outline: none;
 }
 
-.hard {
-    color: black;
-    background-color: rgb(255, 45, 85);
+.dropdown:focus {
+    outline: none;
+    border: 1px solid white;
+}
+
+#easy {
+    color: rgb(0 175 155);
+}
+
+#medium {
+    color: rgb(255, 184, 0);
+}
+
+#hard {
+    color: rgb(255, 45, 85);
 }
 
 
@@ -85,14 +99,35 @@
 #explanation-label {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
+    margin: 0px 0px 10px 0px;
 }
 
 .code-container {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column: 2/3;
+    margin-top: 10px;
+}
+
+#code {
+    height: 100%;
+    width: 95%;
+    font-size: 15px;
+    position: relative;
+    top: 10;
+}
+
+.submit-btn-sec {
+    grid-column: 1/2;
 }
 
 .submit-btn {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    padding: 7px;
+    width: 100px;
+    background-color: rgba(120, 255, 120, 1.00);
+    border: none;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgb(204, 204, 204)
 }
