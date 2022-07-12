@@ -11,9 +11,9 @@
     <div class="heading">
         <h1>Save Problem</h1>
     </div>
-    <form action="" method="post" class="solution-form">
+    <form action="/homepage/" method="POST" class="solution-form">
         <div class="problem-name">
-            <input type="text" placeholder="Name of Problem" id="problem-name">
+            <input type="text" placeholder="Name of Problem" id="problem-name" name="problem-name">
         </div>
         <div class="difficulty-sec">
             <select name="difficulty" class="difficulty dropdown">
@@ -38,8 +38,8 @@
                 </select>
             </div>
             <div class="code-window">
-                <div id="code">
-
+                <div id="code" name="code">
+                    <textarea name="code" id="ace_text-input"></textarea>
                 </div>
             </div>
         </div>
@@ -52,7 +52,9 @@
 {% endblock content %}
 
 {% block scripts %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ace.js" integrity="sha512-FKkEO4RZEQjFmU1hoUYdx6HJLdpHpNzgWspgnQCxx7OOkDVz4kiGJxR97yWc5bzjwcCpJC/CRCiQzuoGYAChhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ace.js"
+    integrity="sha512-FKkEO4RZEQjFmU1hoUYdx6HJLdpHpNzgWspgnQCxx7OOkDVz4kiGJxR97yWc5bzjwcCpJC/CRCiQzuoGYAChhQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{% static "editor/ckeditor.js" %}"></script>
 <script src="{% static 'js/editor.js' %}"></script>
 <script>
