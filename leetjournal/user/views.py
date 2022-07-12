@@ -5,7 +5,6 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth import logout as logout_user
 
-
 def registerUser(request):
     form = RegisterUserForm()
     
@@ -14,6 +13,7 @@ def registerUser(request):
         if form.is_valid():
             form.save()
             messages.success(request, "User Registered Successfully")
+            return redirect('user:loginuser')
         else:
             messages.error(request, "Failed to register user")
     else:
@@ -33,7 +33,7 @@ def loginUser(request):
             if user is not None:
                 login(request, user)
                 messages.success(request, 'User Logged in successfully')
-                return redirect("homepage")
+                return redirect("core:homepage")
             else:
                 messages.error(request, "User login failed")
         else:
@@ -41,8 +41,6 @@ def loginUser(request):
     form = AuthenticationForm()
     return render(request, 'user/login.html', {'form':form})
         
-def homepage(request):
-    return render(request, 'user/homepage.html')
 
 def logout(request):
     logout_user(request)
