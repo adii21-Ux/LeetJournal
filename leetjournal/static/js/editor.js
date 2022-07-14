@@ -11,3 +11,13 @@ language.addEventListener("change", function () {
     codeEditor.setValue("");
     codeEditor.session.setMode(`ace/mode/${language.value}`)
 })
+
+let form = document.querySelector(".solution-form")
+let codeArea = document.querySelector("#script")
+
+form.addEventListener("submit", () => {
+    console.log("submitted")
+    userCode = codeEditor.getValue();
+    codeArea.value += userCode;
+})
+

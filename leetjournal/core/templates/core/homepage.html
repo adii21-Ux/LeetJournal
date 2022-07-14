@@ -38,8 +38,8 @@
                 </select>
             </div>
             <div class="code-window">
+                <textarea name="usercode" id="script" cols="30" rows="10" type="hidden" style="display:none;"></textarea>
                 <div id="code" name="code">
-                    <textarea name="code" id="ace_text-input"></textarea>
                 </div>
             </div>
         </div>
@@ -55,6 +55,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.7.1/ace.js"
     integrity="sha512-FKkEO4RZEQjFmU1hoUYdx6HJLdpHpNzgWspgnQCxx7OOkDVz4kiGJxR97yWc5bzjwcCpJC/CRCiQzuoGYAChhQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+</script>
 <script src="{% static "editor/ckeditor.js" %}"></script>
 <script src="{% static 'js/editor.js' %}"></script>
 <script>
