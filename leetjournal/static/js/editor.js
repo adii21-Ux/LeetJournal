@@ -15,7 +15,7 @@ language.addEventListener("change", function () {
 let form = document.querySelector(".solution-form")
 let codeArea = document.querySelector("#script")
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
     console.log("submitted")
     userCode = codeEditor.getValue();
     codeArea.value += userCode;

@@ -5,5 +5,6 @@ app_name = "core"
 
 urlpatterns = [
     path('homepage/', views.homepageView, name="homepage"),
-    path('solutions/', views.getUserSolutions, name="user-solutions")
+    path('solutions/', views.getUserSolutions, name="user-solutions"),
+    path('submit/', views.submitSolution, name="submit")
 ]

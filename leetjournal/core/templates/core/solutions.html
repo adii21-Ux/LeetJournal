@@ -9,9 +9,15 @@
 {% block content %}
 
 <div class="sol-container">
+    <div class="sol-headings">
+        <span>Name Of Problem</span>
+        <span>Difficulty</span>
+    </div>
     {% for solution in solutions %}
-        <div>{{ solution }}</div>
-        {{ solution.difficulty }}
+        <a href="#"><div class="solution" id={{solution.id}}>
+            <div class="name">{{ solution }}</div>
+            <div class="difficulty"> {{ solution.difficulty }}</div>
+        </div></a>
     {% endfor %}
 </div>
 
