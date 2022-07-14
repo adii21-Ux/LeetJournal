@@ -11,6 +11,9 @@
     margin-left: 90px;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
+    z-index: 10;
+    overflow: auto;
 }
 
 .solution-form {

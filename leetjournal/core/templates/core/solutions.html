@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "css/core/homepage.css" %}">
+<link rel="stylesheet" href="{% static "css/core/solutions.css" %}">
+{% endblock css %}
+
+{% block content %}
+
+<div class="sol-container">
+    {% for solution in solutions %}
+        <div>{{ solution }}</div>
+        {{ solution.difficulty }}
+    {% endfor %}
+</div>
+
+{% endblock content %}
