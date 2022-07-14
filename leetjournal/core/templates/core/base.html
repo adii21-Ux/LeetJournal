@@ -17,6 +17,10 @@
                 <div class="submissions">
                     <a href="#" target="_blank" rel="noopener noreferrer">{{ request.user }}</a>
                 </div>
+                
+                <div class="submissions">
+                    <a href="{% url 'user:signout-user' %}">logout</a>
+                </div>
             </div>
         </div>
     </div>

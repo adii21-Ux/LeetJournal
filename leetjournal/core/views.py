@@ -21,3 +21,9 @@ def homepageView(request):
             return HttpResponse("Please login first")
         
     return render(request, 'core/homepage.html')
+
+def getUserProblems(request):
+    if request.method == "GET":
+        problems = problemModel.objects.filter(user = request.user)
+        return HttpResponse(problems)
+    return HttpResponse("Error")

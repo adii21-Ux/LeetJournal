@@ -45,4 +45,4 @@ def loginUser(request):
 def logout(request):
     logout_user(request)
     messages.info(request, "You have successfully logged out.") 
-    return redirect("login-user")
+    return redirect("user:loginuser")
